@@ -78,14 +78,16 @@ public class FetchWeatherDataTask extends AsyncTask<String, Void, Pair<Observati
             forecastDataAdapter.notifyDataSetChanged();
 //            Log.d("FetchWeatherDataTask", "Forecast data updated in adapter");
         }
+        if (observationData != null) {
 
         if (imageViewWeatherIcon != null) {
             String weatherCondition = observationData.getWeatherCondition();
             int weatherIconResId = getWeatherIconResId(weatherCondition);
             imageViewWeatherIcon.setImageResource(weatherIconResId);
         }
+
         // Update the TextViews with the observation data
-        if (observationData != null) {
+
             if (textViewTemperature != null) {
                 textViewTemperature.setText(observationData.getTemperature());
             }

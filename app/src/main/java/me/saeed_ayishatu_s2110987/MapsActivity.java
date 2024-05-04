@@ -1,8 +1,11 @@
 package me.saeed_ayishatu_s2110987;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -43,6 +46,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        Log.d(TAG, "onMapReady");
 
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);

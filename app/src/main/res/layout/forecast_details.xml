@@ -43,10 +43,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="end"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:gravity="end"
                 tools:text="Today" />
 
         </LinearLayout>
